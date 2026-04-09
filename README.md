@@ -64,5 +64,11 @@ This generates both compiled `.bm`/`.bmx` files (in `source/`) and editable PNGs
 
 ## Credits
 
-- Original character: [0ct0sec](https://github.com/0ct0sec)
+- Original character: [0ct0sec/M5PORKCHOP](https://github.com/0ct0sec/M5PORKCHOP) (MIT)
+- Asset packer: [Next-Flip/Momentum-Firmware](https://github.com/Next-Flip/Momentum-Firmware) (GPL-3.0)
+- Bitmap font: [Adafruit GFX Library](https://github.com/adafruit/Adafruit-GFX-Library) (BSD)
 - Asset pack: [pfefferle](https://github.com/pfefferle)
+
+## License
+
+This project is licensed under GPL-3.0, as required by the inclusion of code from Momentum Firmware. See [LICENSE](LICENSE) for details.
