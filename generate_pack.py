@@ -36,7 +36,9 @@ PREVIEW_DIR = os.path.join(PACK_DIR, "preview")
 DOWNLOAD_DIR = os.path.join(PACK_DIR, "download")
 PNG_DIR = os.path.join(PACK_DIR, "png")
 
-# Adafruit GFX default 5x7 bitmap font (glcdfont.c) - same as M5Stack default
+# Adafruit GFX default 5x7 bitmap font (BSD license)
+# https://github.com/adafruit/Adafruit-GFX-Library/blob/master/glcdfont.c
+# Same font used by M5Stack default (M5PORKCHOP renders at textSize 3)
 # Each character is 5 bytes, columns left to right, LSB = top pixel
 # Only the chars we need for the pig face + weather
 GLCDFONT = {
@@ -81,7 +83,9 @@ for _p in FONT_CANDIDATES:
         break
 
 
-# ── .bm/.bmx conversion (from Momentum asset_packer.py) ──────────────────
+# ── .bm/.bmx conversion ───────────────────────────────────────────────────
+# From Momentum Firmware asset_packer.py (GPL-3.0)
+# https://github.com/Next-Flip/Momentum-Firmware/blob/dev/scripts/asset_packer.py
 
 def convert_bm(img):
     """Convert PIL image to Flipper .bm format (heatshrink compressed)."""

@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# From Momentum Firmware (GPL-3.0)
+# https://github.com/Next-Flip/Momentum-Firmware/blob/dev/scripts/asset_packer.py
 from PIL import Image, ImageOps
 import heatshrink2
 import pathlib

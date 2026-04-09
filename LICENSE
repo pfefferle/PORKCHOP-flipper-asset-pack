@@ -1,0 +1,20 @@
+                    GNU GENERAL PUBLIC LICENSE
+                       Version 3, 29 June 2007
+
+ Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+
+This project includes code from:
+
+- Momentum Firmware (GPL-3.0) - asset_packer.py and convert_bm/convert_bmx
+  https://github.com/Next-Flip/Momentum-Firmware
+
+- M5PORKCHOP (MIT) - Character design and ASCII art definitions
+  https://github.com/0ct0sec/M5PORKCHOP
+
+- Adafruit GFX Library (BSD) - glcdfont bitmap data
+  https://github.com/adafruit/Adafruit-GFX-Library
+
+See the full GPL-3.0 license text at:
+https://www.gnu.org/licenses/gpl-3.0.en.html
