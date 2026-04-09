@@ -1,0 +1,44 @@
+Filetype: Flipper Animation Manifest
+Version: 1
+
+Name: Porkchop_Idle
+Min butthurt: 0
+Max butthurt: 14
+Min level: 1
+Max level: 30
+Weight: 7
+
+Name: Porkchop_Happy
+Min butthurt: 0
+Max butthurt: 14
+Min level: 1
+Max level: 30
+Weight: 5
+
+Name: Porkchop_Hunting
+Min butthurt: 0
+Max butthurt: 14
+Min level: 1
+Max level: 30
+Weight: 3
+
+Name: Porkchop_Sleepy
+Min butthurt: 0
+Max butthurt: 14
+Min level: 1
+Max level: 30
+Weight: 3
+
+Name: Porkchop_Angry
+Min butthurt: 0
+Max butthurt: 14
+Min level: 1
+Max level: 30
+Weight: 3
+
+Name: Porkchop_Sad
+Min butthurt: 0
+Max butthurt: 14
+Min level: 1
+Max level: 30
+Weight: 3
