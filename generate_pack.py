@@ -465,24 +465,24 @@ def save_frame(src_dir, png_dir, frame_num, img):
 
 
 def generate_idle():
-    """Idle: neutral face with clouds drifting by."""
+    """Idle: neutral face with blink."""
     name = "Porkchop_Idle"
     src, png = make_anim_dir(name)
 
     n = 0
     for i in range(4):
         save_frame(src, png, n, render_face(
-            FACES["neutral_r"], grass_line=i, weather="clouds", weather_frame=i))
+            FACES["neutral_r"], grass_line=i))
         n += 1
     save_frame(src, png, n, render_face(
-        FACES["blink_r"], grass_line=0, weather="clouds", weather_frame=4))
+        FACES["blink_r"], grass_line=0))
     n += 1
     for i in range(4):
         save_frame(src, png, n, render_face(
-            FACES["neutral_l"], grass_line=i, weather="clouds", weather_frame=i + 4))
+            FACES["neutral_l"], grass_line=i))
         n += 1
     save_frame(src, png, n, render_face(
-        FACES["blink_l"], grass_line=0, weather="clouds", weather_frame=8))
+        FACES["blink_l"], grass_line=0))
     n += 1
 
     order = [
@@ -534,23 +534,23 @@ def generate_happy():
 
 
 def generate_hunting():
-    """Hunting: clouds, sniff sequence."""
+    """Hunting: sniff sequence."""
     name = "Porkchop_Hunting"
     src, png = make_anim_dir(name)
 
     n = 0
     for i in range(4):
         save_frame(src, png, n, render_face(
-            FACES["hunting_r"], grass_line=i, weather="clouds", weather_frame=i))
+            FACES["hunting_r"], grass_line=i))
         n += 1
     for i in range(3):
         face = ["sniff1_r", "sniff2_r", "sniff3_r"][i]
         save_frame(src, png, n, render_face(
-            FACES[face], grass_line=i, weather="clouds", weather_frame=i + 4))
+            FACES[face], grass_line=i))
         n += 1
     for i in range(4):
         save_frame(src, png, n, render_face(
-            FACES["hunting_l"], grass_line=i, weather="clouds", weather_frame=i + 7))
+            FACES["hunting_l"], grass_line=i))
         n += 1
 
     order = [
@@ -692,12 +692,12 @@ def generate_previews(animation_names):
     anim_sequences = {
         "Porkchop_Idle": {
             "seq": [
-                *[seq("neutral_r", i, "clouds", i) for i in range(4) for _ in range(3)],
-                seq("blink_r", 0, "clouds", 4),
-                *[seq("neutral_r", i, "clouds", i+4) for i in range(2) for _ in range(2)],
-                *[seq("neutral_l", i, "clouds", i+6) for i in range(4) for _ in range(3)],
-                seq("blink_l", 0, "clouds", 10),
-                *[seq("neutral_l", i, "clouds", i+10) for i in range(2) for _ in range(2)],
+                *[seq("neutral_r", i) for i in range(4) for _ in range(3)],
+                seq("blink_r", 0),
+                *[seq("neutral_r", i) for i in range(2) for _ in range(2)],
+                *[seq("neutral_l", i) for i in range(4) for _ in range(3)],
+                seq("blink_l", 0),
+                *[seq("neutral_l", i) for i in range(2) for _ in range(2)],
             ],
             "fps": 4,
         },
@@ -714,14 +714,14 @@ def generate_previews(animation_names):
         },
         "Porkchop_Hunting": {
             "seq": [
-                *[seq("hunting_r", i, "clouds", i) for i in range(3) for _ in range(2)],
-                seq("sniff1_r", 0, "clouds", 4),
-                seq("sniff2_r", 0, "clouds", 5),
-                seq("sniff3_r", 1, "clouds", 6),
-                seq("sniff1_r", 0, "clouds", 7),
-                seq("sniff2_r", 0, "clouds", 8),
-                seq("sniff3_r", 1, "clouds", 9),
-                *[seq("hunting_l", i, "clouds", i+10) for i in range(3) for _ in range(2)],
+                *[seq("hunting_r", i) for i in range(3) for _ in range(2)],
+                seq("sniff1_r", 0),
+                seq("sniff2_r", 0),
+                seq("sniff3_r", 1),
+                seq("sniff1_r", 0),
+                seq("sniff2_r", 0),
+                seq("sniff3_r", 1),
+                *[seq("hunting_l", i) for i in range(3) for _ in range(2)],
             ],
             "fps": 5,
         },
