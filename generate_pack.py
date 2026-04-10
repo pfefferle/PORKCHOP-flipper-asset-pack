@@ -760,7 +760,12 @@ def generate_previews(animation_names):
             img = render_face(FACES[face_key], grass_line=grass_idx,
                               weather=weather, weather_frame=wf)
             scaled = img.resize((SCREEN_W * 4, SCREEN_H * 4), Image.NEAREST)
-            frames.append(scaled.convert("P"))
+            p_img = scaled.convert("P")
+            # Remap palette: white background → Flipper orange LCD
+            palette = [0] * 768
+            palette[255 * 3:255 * 3 + 3] = [255, 140, 0]  # white → orange
+            p_img.putpalette(palette)
+            frames.append(p_img)
 
         duration = 1000 // anim["fps"]
         gif_path = os.path.join(PREVIEW_DIR, f"{preview_num}.gif")
