@@ -307,7 +307,7 @@ def render_face(face_lines, grass_line=None, weather=None, weather_frame=0):
     Uses the Adafruit GFX 5x7 bitmap font (same as M5Stack default).
     Black text on white background (matching Flipper LCD appearance).
     """
-    img = Image.new("1", (SCREEN_W, SCREEN_H), 1)  # white background
+    img = Image.new("1", (SCREEN_W, SCREEN_H), 255)  # white background
     draw = ImageDraw.Draw(img)
 
     # Pig face at 2x scale: 12px per char wide, 14px tall
@@ -345,7 +345,7 @@ def render_face(face_lines, grass_line=None, weather=None, weather_frame=0):
 
 def render_icon(face_lines, width, height):
     """Render a pig face as a WxH 1-bit image for icons using bitmap font."""
-    img = Image.new("1", (width, height), 1)  # white background
+    img = Image.new("1", (width, height), 255)  # white background
     draw = ImageDraw.Draw(img)
 
     # Choose scale based on icon size
